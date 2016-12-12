@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!-- Chrome, Firefox OS, Opera and Vivaldi -->
+	<meta name="theme-color" content="#ff7d32">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#ff7d32">
+	<title></title>
+	<meta name="Generator" content="Cocoa HTML Writer">
+	<meta name="apple-itunes-app" content="app-id=410604563">
+	<meta name="CocoaVersion" content="1265.2">
+	<style>
+		h1,button,span,input		{
+			font-size:100px;
+			font-family: Arial, Georgia, Serif;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.mobile-1.4.4.min.js"></script>
+	<script type="text/javascript" src="Blippar.js">	</script>
+
+	<script type="text/javascript">
+		function StartBlipp (Address) {
+			Blippar.triggerBlipp(event, Address, 'blipp', false);
+		}
+
+		function StartBlippForm () {
+			var a = document.getElementById("blipp_address").value;
+			if(a!=""){
+				console.log(a);
+				Blippar.triggerBlipp(event, a, 'blipp', false);
+			}
+		}
+	</script>
+</head>
+<body onload="StartBlippForm()">
+	<h1>
+		<form>
+			Address:<br><br>
+			<input id="blipp_address" type="text" name="firstname" maxlength="20" size="10" value="2fupz1uxvl"><br><br>
+			<button type="button" onclick="javascript:StartBlippForm();">Blipp</button><br><br>
+		</form>
+	</h1>
+</body>
+</html>
