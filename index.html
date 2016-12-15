@@ -33,6 +33,10 @@
 				Blippar.triggerBlipp(event, a, 'blipp', false);
 			}
 		}
+		$('#blipp_button').click(function (e) {
+			e.preventDefault();
+			StartBlippForm();
+		})
 	</script>
 </head>
 <body>
